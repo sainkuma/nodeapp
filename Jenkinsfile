@@ -17,13 +17,7 @@ pipeline {
     }
     stage('Install') {
       steps {
-        sh 'echo ${WORKSPACE}'
         sh 'npm install'
-      }
-    }
-    stage('Test') {
-      steps {
-        sh 'npm test -- --watch=false'
       }
     }
     stage('Clear Install') {
